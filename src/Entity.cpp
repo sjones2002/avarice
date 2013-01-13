@@ -17,5 +17,13 @@ typedef struct entity_t {
 } __attribute__ ((packed)) entity_t;
 
 
+class Entity: public object {
+private:
+	entity_t data;
+
+public:
+
+};
+
 
 
