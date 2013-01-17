@@ -1,14 +1,19 @@
 
 #include "types.h"
 
-using namespace std;
+namespace avarice {
 
-class Item: public Object {
-private:
-	item_t		data;
+	class Item {
+		private:
+		item_t		data;
 
-public:
-	bool	fwrite		(int fd);
+		public:
+			Item		(item_t* import);
+			~Item		(void);
+
+		bool	fwrite		(int fd);
 	
-	Item*	clone		(void);
-};
+		Item*	clone		(void);
+	};
+
+}

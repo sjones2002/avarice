@@ -58,3 +58,15 @@ typedef struct entity_t {
 	inventory_t	inventory;
 	uuid_t		location;
 } __attribute__ ((packed)) entity_t;
+
+typedef struct location_t {
+	object_t	header;
+	uuid_t		entities[4];
+	uuid_t		items[4];
+	uuid_t		connections[4];
+	value_t		is_endpoint;
+} __attribute__ ((packed)) location_t;
+
+
+
+

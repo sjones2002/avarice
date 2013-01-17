@@ -1,11 +1,20 @@
 
+#include "types.h"
 
-class Object {
-private:
-	object_t 	data;
+namespace avarice {
+
+	class Object {
+	private:
+		object_t 	data;
 	
-public:
-	bool		fwrite		(int fd);
+	public:
+
+				Object		(object_t* import);
+				~Object		(void);
+			
+		bool		fwrite		(int fd);
 	
-	Object*		clone		(void);
-};
+		Object*		clone		(void);
+	};
+	
+}

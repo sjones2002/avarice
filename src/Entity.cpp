@@ -1,7 +1,7 @@
 
 #include "Entity.hpp"
 
-using namespace std;
+using namespace avarice;
 
 bool Entity::fwrite (int fd)
 {

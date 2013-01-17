@@ -1,7 +1,7 @@
 
 #include "Item.hpp"
 
-using namespace std;
+using namespace avarice;
 
 bool Item::fwrite (int fd)
 {

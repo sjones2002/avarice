@@ -1,16 +1,27 @@
 
-using namespace std;
+#include "types.h"
 
+namespace avarice {
 
-class Entity: public Object {
-private:
-	entity_t	data;
+	class Entity {
+		private:
+		entity_t	data;
+		
+		Item*		primary_weapon;
+		Item*		reserve_weapon;
+		Item*		chest_armor;
+		Item*		accessory_armor;
+		Item*		carry[4];
+		Item*		discard[4];
+		
+		Location*	location;
 
-public:
-	bool		fwrite		(int fd);
+		public:
+			Entity		(entity_t* import);
+			~Entity		(void);
+		bool	fwrite		(int fd);
 	
-	Entity*		clone		(void);
-};
+		Entity*	clone		(void);
+	};
 
-
-
+}
